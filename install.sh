@@ -1,13 +1,18 @@
 #!/bin/bash
 
-# Dotfiles installation script
+# Exit immediately if a command exits with a non-zero status.
+set -e
 
-# Variables
+# --- Variables and Configuration ---
+
+# Determine the script's directory to resolve absolute paths.
+# This ensures the script can be run from anywhere.
 DOTFILES_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
-# List of files/dirs to symlink in ~
+# List of files/directories to symlink to the user's home directory.
 # Format: "source_in_repo;target_in_home"
-files_to_link=(
+# Example: ".config/nvim;.config/nvim" will link ~/.dotfiles/.config/nvim to ~/.config/nvim
+readonly files_to_link=(
     ".bashrc;.bashrc"
     ".tmux.conf;.tmux.conf"
     ".vimrc;.vimrc"
@@ -37,69 +42,102 @@ files_to_link=(
     ".config/zellij;.config/zellij"
 )
 
-# List of files/dirs that require sudo
-# Format: "source_in_repo;target_path"
-sudo_files_to_link=(
+# List of files/directories that require sudo privileges to link to system paths.
+# Format: "source_in_repo;absolute_target_path"
+readonly sudo_files_to_link=(
     "etc/logid.cfg;/etc/logid.cfg"
     "usr/share/themes/TokyoNight;/usr/share/themes/TokyoNight"
 )
 
-echo "Starting dotfiles installation..."
-echo "Source directory: $DOTFILES_DIR"
+# --- Helper Functions ---
 
-# Function to create symlinks
+# A function to print messages with a consistent format.
+info() {
+    printf "INFO: %s\n" ""$1""
+}
+
+# A function to print success messages.
+success() {
+    printf "✅ SUCCESS: %s\n" ""$1""
+}
+
+# A function to print warning messages.
+warning() {
+    printf "⚠️ WARNING: %s\n" ""$1""
+}
+
+# A function to create symbolic links, handling backups and directory creation.
 create_symlink() {
-    local source_path="$1"
-    local target_path="$2"
-    local target_dir
-    local use_sudo="$3"
+    local source_path=""$1""
+    local target_path=""$2""
+    local use_sudo=""$3""
     local cmd_prefix=""
 
-    if [ "$use_sudo" = "sudo" ]; then
+    if [[ ""$use_sudo"" == ""sudo"" ]]; then
         cmd_prefix="sudo "
     fi
 
-    target_dir=$(dirname "$target_path")
-
-    # If target exists, back it up
-    if [ -e "$target_path" ] || [ -L "$target_path" ]; then
-        echo "Backing up existing $target_path"
-        ${cmd_prefix}mv "$target_path" "$target_path.bak_$(date +%Y%m%d%H%M%S)"
-        echo "A backup was created: $target_path.bak_..."
+    # Ensure the source file/directory exists
+    if [[ ! -e ""$source_path"" ]]; then
+        warning "Source file not found: ""$source_path"". Skipping."
+        return
     fi
 
-    # Create parent directory if it doesn't exist
-    if [ ! -d "$target_dir" ]; then
-        echo "Creating directory: $target_dir"
-        ${cmd_prefix}mkdir -p "$target_dir"
+    # Create parent directory of the target if it doesn't exist
+    local target_dir
+    target_dir=$(dirname ""$target_path"")
+    if [[ ! -d ""$target_dir"" ]]; then
+        info "Creating directory: ""$target_dir""
+        ${cmd_prefix}mkdir -p ""$target_dir""
     fi
 
-    # Create symlink
-    echo "Linking $source_path to $target_path"
-    ${cmd_prefix}ln -s "$source_path" "$target_path"
-    echo "---"
+    # If the target already exists, back it up
+    if [[ -e ""$target_path"" || -L ""$target_path"" ]]; then
+        local backup_path=""${target_path}.bak_$(date +%Y%m%d%H%M%S)""
+        info "Backing up existing ''"$target_path"'' to ''"$backup_path"''"
+        ${cmd_prefix}mv ""$target_path"" ""$backup_path""
+    fi
+
+    # Create the symbolic link
+    info "Linking ''"$source_path"'' to ''"$target_path"''"
+    ${cmd_prefix}ln -s ""$source_path"" ""$target_path""
 }
 
-# --- Symlink user-level files ---
-echo
-echo "Linking user configuration files..."
-for item in "${files_to_link[@]}"; do
-    IFS=';' read -r source target <<< "$item"
-    create_symlink "$DOTFILES_DIR/$source" "$HOME/$target"
-done
+# --- Main Script Logic ---
 
-# --- Symlink system-level files with sudo ---
-if [ ${#sudo_files_to_link[@]} -gt 0 ]; then
-    echo
-    echo "The following files require sudo privileges to link."
-    echo "You may be prompted for your password."
-    for item in "${sudo_files_to_link[@]}"; do
-        IFS=';' read -r source target <<< "$item"
-        create_symlink "$DOTFILES_DIR/$source" "$target" "sudo"
+main() {
+    info "Starting dotfiles installation..."
+    info "Dotfiles repository found at: ""$DOTFILES_DIR""
+    printf "\n"
+
+    # --- Symlink user-level files ---
+    info "Linking user configuration files to ""$HOME""..."
+    for item in ""${files_to_link[@]}""; do
+        IFS=';' read -r source target <<< ""$item""
+        create_symlink ""$DOTFILES_DIR/$source"" ""$HOME/$target""
     done
-fi
+    printf "\n"
 
+    # --- Symlink system-level files with sudo ---
+    if [[ ""${#sudo_files_to_link[@]}"" -gt 0 ]]; then
+        info "Linking system-wide configuration files (requires sudo)..."
+        # Check for sudo privileges upfront
+        if ! sudo -v; then
+            warning "Sudo credentials not provided. Cannot link system files."
+            exit 1
+        fi
 
-echo "✅ Installation complete!"
-echo "Old configuration files were backed up to their original location with a .bak extension."
-echo "You may need to restart your session for all changes to take effect."
+        for item in ""${sudo_files_to_link[@]}""; do
+            IFS=';' read -r source target <<< ""$item""
+            create_symlink ""$DOTFILES_DIR/$source"" ""$target"" ""sudo""
+        done
+        printf "\n"
+    fi
+
+    success "Dotfiles installation complete!"
+    info "Old configuration files were backed up with a .bak extension."
+    info "You may need to restart your shell or log out for all changes to take effect."
+}
+
+# Run the main function
+main
