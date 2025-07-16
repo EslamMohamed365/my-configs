@@ -1,10 +1,13 @@
 # My Personal Dotfiles
 
 <p align="center">
-  <img src="https://img.shields.io/badge/os-Linux-blue.svg" alt="Linux">
-  <img src="https://img.shields.io/badge/wm-Sway-purple.svg" alt="Sway">
-  <img src="https://img.shields.io/badge/theme-Tokyo_Night-darkblue.svg" alt="Tokyo Night">
-  <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
+  <img src="https://raw.githubusercontent.com/folke/tokyonight.nvim/main/screenshots/tokyonight.png" alt="Tokyo Night Banner" width="600"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/your-username/my-config/stargazers"><img src="https://img.shields.io/github/stars/your-username/my-config.svg?style=for-the-badge&logo=github&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41" alt="Stars"></a>
+  <a href="https://github.com/your-username/my-config/issues"><img src="https://img.shields.io/github/issues/your-username/my-config.svg?style=for-the-badge&logo=github&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41" alt="Issues"></a>
+  <a href="https://github.com/your-username/my-config/blob/main/LICENSE"><img src="https://img.shields.io/github/license/your-username/my-config.svg?style=for-the-badge&logo=github&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41" alt="License"></a>
 </p>
 
 <p align="center">
@@ -13,49 +16,71 @@
 
 ---
 
+## Table of Contents
+
+- [Gallery](#gallery)
+- [Key Features](#key-features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Software Configuration](#software-configuration)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+---
+
 ## Gallery
 
-*A picture is worth a thousand words. Here are some screenshots of the setup in action. (You can replace these with your own screenshots).*
+*A picture is worth a thousand words. Here are some screenshots of the setup in action.*
 
 | Sway Desktop                                     | Neovim                                           | Yazi File Manager                                |
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
-| <img src=".config/sway/arch_00_3840x2160.png" alt="Sway Desktop"> | <img src="https://raw.githack.com/folke/tokyonight.nvim/main/screenshots/day.png" alt="Neovim with Tokyo Night"> | <img src=".config/yazi/flavors/tokyo-night.yazi/preview.png" alt="Yazi File Manager"> |
+| <img src=".config/sway/arch_00_3840x2160.png" alt="Sway Desktop"> | <img src="https://raw.githubusercontent.com/folke/tokyonight.nvim/main/screenshots/day.png" alt="Neovim with Tokyo Night"> | <img src=".config/yazi/flavors/tokyo-night.yazi/preview.png" alt="Yazi File Manager"> |
 
+---
 
 ## Key Features
 
-- **Consistent Theming:** A unified **Tokyo Night** theme across all applications, from the terminal to the text editor and GTK apps.
-- **Tiling Window Manager:** A Sway-based environment for keyboard-driven workflow and efficient window management.
-- **Developer-Focused:** Configurations optimized for software development with tools like Neovim (LazyVim), Lazygit, and Tmux.
-- **Modern CLI Tools:** Enhanced command-line experience with Starship, Eza, FZF, and Yazi.
-- **Automated Installation:** A simple installation script to deploy the dotfiles quickly.
+-   **Consistent Theming:** A unified **Tokyo Night** theme across all applications, from the terminal to the text editor and GTK apps.
+-   **Tiling Window Manager:** A Sway-based environment for a keyboard-driven workflow and efficient window management.
+-   **Developer-Focused:** Configurations optimized for software development with tools like Neovim (LazyVim), Lazygit, and Tmux.
+-   **Modern CLI Tools:** Enhanced command-line experience with Starship, Eza, FZF, and Yazi.
+-   **Automated Installation:** A simple installation script to deploy the dotfiles quickly.
+
+---
 
 ## Prerequisites
 
+<details>
+<summary>Click to expand</summary>
+
 Before installing, ensure you have the following software installed on your system. The names may vary depending on your distribution's package manager (e.g., `apt`, `pacman`, `dnf`).
 
-- `sway`
-- `waybar`
-- `neovim`
-- `ghostty`
-- `zellij`
-- `tmux`
-- `bash`
-- `starship`
-- `eza`
-- `yazi`
-- `fzf`
-- `lazygit`
-- `rofi` or `wofi`
-- `dunst`
-- `fastfetch`
-- `bpytop`
-- `mpv`
-- `gtk3`, `gtk4`
-- `qt5ct`
-- `kanshi`
-- `logid` (for Logitech devices)
-- `git`
+-   `sway`
+-   `waybar`
+-   `neovim`
+-   `ghostty`
+-   `zellij`
+-   `tmux`
+-   `bash`
+-   `starship`
+-   `eza`
+-   `yazi`
+-   `fzf`
+-   `lazygit`
+-   `rofi` or `wofi`
+-   `dunst`
+-   `fastfetch`
+-   `bpytop`
+-   `mpv`
+-   `gtk3`, `gtk4`
+-   `qt5ct`
+-   `kanshi`
+-   `logid` (for Logitech devices)
+-   `git`
+
+</details>
+
+---
 
 ## Installation
 
@@ -73,7 +98,12 @@ Before installing, ensure you have the following software installed on your syst
     ```
     The script will automatically create symbolic links for the configuration files and directories. It will also back up any existing files that would be overwritten.
 
+---
+
 ## Software Configuration
+
+<details>
+<summary>Click to expand</summary>
 
 This repository includes settings for the following software:
 
@@ -100,9 +130,15 @@ This repository includes settings for the following software:
 | **Kanshi**    | A dynamic display configuration tool for Wayland  |
 | **Logid**     | Logitech device manager for advanced features     |
 
+</details>
+
+---
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
 
 ## Acknowledgements
 
