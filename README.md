@@ -6,11 +6,11 @@ Welcome to my personal dotfiles repository! This collection houses my meticulous
 
 ## Table of Contents
 
-*   [Features](#features)
-*   [Installation](#installation)
-*   [Usage](#usage)
-*   [Contributing](#contributing)
-*   [License](#license)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
@@ -18,23 +18,23 @@ Welcome to my personal dotfiles repository! This collection houses my meticulous
 
 This dotfiles collection is built with a focus on modularity, aesthetics, and functionality. Key highlights include:
 
-*   🚀 **Modular Structure:** Configurations are neatly organized by application, making them easy to manage, update, and understand.
-*   🌙 **TokyoNight Theme Integration:** A significant portion of these configurations are pre-configured to embrace the beautiful and eye-friendly TokyoNight color scheme, ensuring a cohesive visual experience across your tools.
-*   🛠️ **Key Application Support:** Includes tailored configurations for a wide array of essential tools:
-    *   **Neovim (nvim):** My powerful and highly customized text editor setup.
-    *   **Tmux:** For robust terminal multiplexing and session management.
-    *   **Sway:** A dynamic and efficient Wayland compositor.
-    *   **Waybar:** A highly customizable Wayland bar.
-    *   **Rofi:** A versatile application launcher and menu.
-    *   **Zellij:** A modern terminal workspace.
-    *   **Yazi:** A fast and intuitive terminal file manager.
-    *   **EditorConfig:** Ensuring consistent coding styles across different editors and IDEs.
-    *   ...and many more!
+- 🚀 **Modular Structure:** Configurations are neatly organized by application, making them easy to manage, update, and understand.
+- 🌙 **TokyoNight Theme Integration:** A significant portion of these configurations are pre-configured to embrace the beautiful and eye-friendly TokyoNight color scheme, ensuring a cohesive visual experience across your tools.
+- 🛠️ **Key Application Support:** Includes tailored configurations for a wide array of essential tools:
+    - **Neovim (nvim):** My powerful and highly customized text editor setup.
+    - **Tmux:** For robust terminal multiplexing and session management.
+    - **Sway:** A dynamic and efficient Wayland compositor.
+    - **Waybar:** A highly customizable Wayland bar.
+    - **Rofi:** A versatile application launcher and menu.
+    - **Zellij:** A modern terminal workspace.
+    - **Yazi:** A fast and intuitive terminal file manager.
+    - **EditorConfig:** Ensuring consistent coding styles across different editors and IDEs.
+    - ...and many more!
 
 ### Previews
 
-| Neovim (LazyVim) | Sway |
-| :--------------- | :--- |
+| Neovim (LazyVim)                                                                                                       | Sway                                                                      |
+| :--------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
 | ![Neovim Preview](https://user-images.githubusercontent.com/292349/213447056-92290767-ea16-430c-8727-ce994c93e9cc.png) | ![Sway Preview](/home/eslam/my-config/.config/sway/arch_00_3840x2160.png) |
 
 ---
@@ -62,8 +62,8 @@ bash install.sh
 
 Once installed, your applications should automatically pick up the new configurations. For some changes to take full effect, you might need to:
 
-*   Restart the specific application (e.g., Neovim, Tmux).
-*   Log out and log back in, or even reboot your system, especially for display server configurations (Sway, Waybar).
+- Restart the specific application (e.g., Neovim, Tmux).
+- Log out and log back in, or even reboot your system, especially for display server configurations (Sway, Waybar).
 
 Feel free to dive into the individual configuration files within the `.config/` directory. They are commented where necessary to help you understand and further customize them to your liking.
 
@@ -73,8 +73,8 @@ Feel free to dive into the individual configuration files within the `.config/` 
 
 Your feedback and contributions are always welcome! If you have suggestions for improvements, encounter any issues, or would like to add configurations for other applications, please feel free to:
 
-*   Open an issue
-*   Submit a pull request
+- Open an issue
+- Submit a pull request
 
 ---
 
