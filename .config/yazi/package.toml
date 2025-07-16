@@ -1,0 +1,49 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "86d28e4"
+hash = "56fdabc96fc1f4d53c96eb884b02a5be"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "86d28e4"
+hash = "d6f60c24d8c0cf57a855bf46115b2502"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "86d28e4"
+hash = "d2f04875bbd4ed3dd5696e8c4b094fde"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "86d28e4"
+hash = "b3f1d6ec3721d4061aad5f69cddb0cf9"
+
+[[plugin.deps]]
+use = "josephschmitt/auto-layout"
+rev = "626a601"
+hash = "747a700c90fffc5b187a6094fd0661b0"
+
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "0742fff"
+hash = "2bd799b42b8e42b8ef100310be71f8d1"
+
+[[plugin.deps]]
+use = "dedukun/relative-motions"
+rev = "a603d9e"
+hash = "e02a788e5b8ae0fb47fd0193dda589cc"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "b886025"
+hash = "1adc12c2b2b025411ab61eb8f0879574"
+
+[[plugin.deps]]
+use = "Lil-Dank/lazygit"
+rev = "7a08a09"
+hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
+
+[[flavor.deps]]
+use = "BennyOe/tokyo-night"
+rev = "5f56364"
+hash = "c0bf69ad2c44005892d586e9693993c6"
