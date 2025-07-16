@@ -19,7 +19,7 @@
 
 | Sway Desktop                                     | Neovim                                           | Yazi File Manager                                |
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
-| <img src=".config/sway/arch_00_3840x2160.png" alt="Sway Desktop"> | <img src="https://raw.githubusercontent.com/folke/tokyonight.nvim/main/screenshots/day.png" alt="Neovim with Tokyo Night"> | <img src="https://raw.githubusercontent.com/sxyazi/yazi/main/assets/preview.png" alt="Yazi File Manager"> |
+| <img src=".config/sway/arch_00_3840x2160.png" alt="Sway Desktop"> | <img src="https://raw.githack.com/folke/tokyonight.nvim/main/screenshots/day.png" alt="Neovim with Tokyo Night"> | <img src=".config/yazi/flavors/tokyo-night.yazi/preview.png" alt="Yazi File Manager"> |
 
 
 ## Key Features
