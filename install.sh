@@ -16,6 +16,7 @@ readonly files_to_link=(
     ".bashrc;.bashrc"
     ".tmux.conf;.tmux.conf"
     ".vimrc;.vimrc"
+    ".editorconfig;.editorconfig"
     ".config/bpytop;.config/bpytop"
     ".config/dunst;.config/dunst"
     ".config/eza;.config/eza"
