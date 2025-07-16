@@ -31,6 +31,12 @@ This dotfiles collection is built with a focus on modularity, aesthetics, and fu
     *   **EditorConfig:** Ensuring consistent coding styles across different editors and IDEs.
     *   ...and many more!
 
+### Previews
+
+| Neovim (LazyVim) | Yazi | Sway |
+| :--------------- | :--- | :--- |
+| ![Neovim Preview](https://placehold.co/600x400/EEE/31343C?text=Neovim+LazyVim) | ![Yazi Preview](https://placehold.co/600x400/EEE/31343C?text=Yazi) | ![Sway Preview](https://placehold.co/600x400/EEE/31343C?text=Sway) |
+
 ---
 
 ## Installation
