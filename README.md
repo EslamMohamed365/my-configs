@@ -35,7 +35,7 @@ This dotfiles collection is built with a focus on modularity, aesthetics, and fu
 
 | Neovim (LazyVim) | Yazi | Sway |
 | :--------------- | :--- | :--- |
-| ![Neovim Preview](https://placehold.co/600x400/EEE/31343C?text=Neovim+LazyVim) | ![Yazi Preview](https://placehold.co/600x400/EEE/31343C?text=Yazi) | ![Sway Preview](https://placehold.co/600x400/EEE/31343C?text=Sway) |
+| ![Neovim Preview](https://user-images.githubusercontent.com/292349/213447056-92290767-ea16-430c-8727-ce994c93e9cc.png) | ![Yazi Preview](https://placehold.co/600x400/EEE/31343C?text=Yazi) | ![Sway Preview](/home/eslam/my-config/.config/sway/arch_00_3840x2160.png) |
 
 ---
 
