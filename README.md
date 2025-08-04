@@ -21,15 +21,15 @@ This dotfiles collection is built with a focus on modularity, aesthetics, and fu
 - 🚀 **Modular Structure:** Configurations are neatly organized by application, making them easy to manage, update, and understand.
 - 🌙 **TokyoNight Theme Integration:** A significant portion of these configurations are pre-configured to embrace the beautiful and eye-friendly TokyoNight color scheme, ensuring a cohesive visual experience across your tools.
 - 🛠️ **Key Application Support:** Includes tailored configurations for a wide array of essential tools:
-    - **Neovim (nvim):** My powerful and highly customized text editor setup.
-    - **Tmux:** For robust terminal multiplexing and session management.
-    - **Sway:** A dynamic and efficient Wayland compositor.
-    - **Waybar:** A highly customizable Wayland bar.
-    - **Rofi:** A versatile application launcher and menu.
-    - **Zellij:** A modern terminal workspace.
-    - **Yazi:** A fast and intuitive terminal file manager.
-    - **EditorConfig:** Ensuring consistent coding styles across different editors and IDEs.
-    - ...and many more!!
+      - **Neovim (nvim):** My powerful and highly customized text editor setup.
+      - **Tmux:** For robust terminal multiplexing and session management.
+      - **Sway:** A dynamic and efficient Wayland compositor.
+      - **Waybar:** A highly customizable Wayland bar.
+      - **Rofi:** A versatile application launcher and menu.
+      - **Zellij:** A modern terminal workspace.
+      - **Yazi:** A fast and intuitive terminal file manager.
+      - **EditorConfig:** Ensuring consistent coding styles across different editors and IDEs.
+      - ...and many more!!
 
 ### Previews
 
