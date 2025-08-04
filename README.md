@@ -29,7 +29,7 @@ This dotfiles collection is built with a focus on modularity, aesthetics, and fu
     - **Zellij:** A modern terminal workspace.
     - **Yazi:** A fast and intuitive terminal file manager.
     - **EditorConfig:** Ensuring consistent coding styles across different editors and IDEs.
-    - ...and many more!
+    - ...and many more!!
 
 ### Previews
 
